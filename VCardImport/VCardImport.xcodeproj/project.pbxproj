@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1E2E5F01A92247800CEE376 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E2E5E41A92223700CEE376 /* Alamofire.framework */; };
+		A1E2E5F31A92249100CEE376 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E2E5E41A92223700CEE376 /* Alamofire.framework */; };
+		A1E2E5F41A9224D000CEE376 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A1E2E5E41A92223700CEE376 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E90684AC1A589F0700728D0B /* VCardSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90684AB1A589F0700728D0B /* VCardSourceCell.swift */; };
 		E90684B11A58B17900728D0B /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90684B01A58B17900728D0B /* DictionaryConvertible.swift */; };
 		E907C6A91A6B382700612C90 /* FutureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907C6A81A6B382700612C90 /* FutureExtension.swift */; };
@@ -30,7 +33,6 @@
 		E97D05C91A96806500740659 /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D05C81A96806500740659 /* AddressBook.swift */; };
 		E97DE1841A0EC80D005FAB7D /* VCardImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DE1831A0EC80D005FAB7D /* VCardImporter.swift */; };
 		E97F0C371A86C644005C9B0B /* RecordNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F0C361A86C644005C9B0B /* RecordNameTests.swift */; };
-		E980DB3C1A8D3D3300D479AE /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E980DB3A1A8D3CF900D479AE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E983F1D819E9C76F00219305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E983F1D719E9C76F00219305 /* AppDelegate.swift */; };
 		E983F1DA19E9C76F00219305 /* VCardSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E983F1D919E9C76F00219305 /* VCardSourcesViewController.swift */; };
 		E983F1DF19E9C76F00219305 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E983F1DE19E9C76F00219305 /* Images.xcassets */; };
@@ -76,26 +78,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A1E2E5E31A92223700CEE376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		A1E2E5E51A92223700CEE376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		A1E2E5E71A92223700CEE376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		A1E2E5EE1A92245C00CEE376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		A1E2E5F11A92248D00CEE376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		E9401B8E1A7413570078AD51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = AlamofireTests;
-		};
-		E980DB351A8D3CF900D479AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 27AB60061A7FAFBF0069F786;
-			remoteInfo = Alamofire;
-		};
-		E980DB391A8D3CF900D479AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9401B841A7413570078AD51 /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27AB60071A7FAFBF0069F786;
-			remoteInfo = Alamofire;
 		};
 		E983F1E819E9C76F00219305 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -113,7 +136,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E980DB3C1A8D3D3300D479AE /* Alamofire.framework in Copy Frameworks */,
+				A1E2E5F41A9224D000CEE376 /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +166,7 @@
 		E97D05C81A96806500740659 /* AddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressBook.swift; path = Record/AddressBook.swift; sourceTree = "<group>"; };
 		E97DE1831A0EC80D005FAB7D /* VCardImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VCardImporter.swift; path = Domain/VCardImporter.swift; sourceTree = "<group>"; };
 		E97F0C361A86C644005C9B0B /* RecordNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordNameTests.swift; path = Record/RecordNameTests.swift; sourceTree = "<group>"; };
-		E983F1D219E9C76F00219305 /* vCard Turbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vCard Turbo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E983F1D219E9C76F00219305 /* vCard Turbo (Reaktor Edition).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vCard Turbo (Reaktor Edition).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E983F1D619E9C76F00219305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E983F1D719E9C76F00219305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = UI/AppDelegate.swift; sourceTree = "<group>"; };
 		E983F1D919E9C76F00219305 /* VCardSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VCardSourcesViewController.swift; path = UI/VCardSourcesViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E2E5F31A92249100CEE376 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E2E5F01A92247800CEE376 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +224,10 @@
 		E9401B851A7413570078AD51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E980DB3A1A8D3CF900D479AE /* Alamofire.framework */,
-				E9401B8F1A7413570078AD51 /* AlamofireTests.xctest */,
+				A1E2E5E41A92223700CEE376 /* Alamofire.framework */,
+				A1E2E5E61A92223700CEE376 /* Alamofire.framework */,
+				E9401B8F1A7413570078AD51 /* Alamofire iOS Tests.xctest */,
+				A1E2E5E81A92223700CEE376 /* Alamofire OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +245,7 @@
 		E983F1D319E9C76F00219305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E983F1D219E9C76F00219305 /* vCard Turbo.app */,
+				E983F1D219E9C76F00219305 /* vCard Turbo (Reaktor Edition).app */,
 				E983F1E719E9C76F00219305 /* Test.xctest */,
 			);
 			name = Products;
@@ -393,11 +420,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				E980DB361A8D3CF900D479AE /* PBXTargetDependency */,
+				A1E2E5F21A92248D00CEE376 /* PBXTargetDependency */,
 			);
 			name = "vCard Turbo";
 			productName = "$(TARGET_NAME)";
-			productReference = E983F1D219E9C76F00219305 /* vCard Turbo.app */;
+			productReference = E983F1D219E9C76F00219305 /* vCard Turbo (Reaktor Edition).app */;
 			productType = "com.apple.product-type.application";
 		};
 		E983F1E619E9C76F00219305 /* Test */ = {
@@ -411,6 +438,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A1E2E5EF1A92245C00CEE376 /* PBXTargetDependency */,
 				E983F1E919E9C76F00219305 /* PBXTargetDependency */,
 			);
 			name = Test;
@@ -430,7 +458,7 @@
 				TargetAttributes = {
 					E983F1D119E9C76F00219305 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = R235CYQ493;
+						DevelopmentTeam = JXNJYC9443;
 					};
 					E983F1E619E9C76F00219305 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -465,18 +493,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E9401B8F1A7413570078AD51 /* AlamofireTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AlamofireTests.xctest;
-			remoteRef = E9401B8E1A7413570078AD51 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E980DB3A1A8D3CF900D479AE /* Alamofire.framework */ = {
+		A1E2E5E41A92223700CEE376 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = E980DB391A8D3CF900D479AE /* PBXContainerItemProxy */;
+			remoteRef = A1E2E5E31A92223700CEE376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A1E2E5E61A92223700CEE376 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A1E2E5E51A92223700CEE376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A1E2E5E81A92223700CEE376 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = A1E2E5E71A92223700CEE376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9401B8F1A7413570078AD51 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = E9401B8E1A7413570078AD51 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -581,10 +623,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E980DB361A8D3CF900D479AE /* PBXTargetDependency */ = {
+		A1E2E5EF1A92245C00CEE376 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = E980DB351A8D3CF900D479AE /* PBXContainerItemProxy */;
+			name = "Alamofire iOS";
+			targetProxy = A1E2E5EE1A92245C00CEE376 /* PBXContainerItemProxy */;
+		};
+		A1E2E5F21A92248D00CEE376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = A1E2E5F11A92248D00CEE376 /* PBXContainerItemProxy */;
 		};
 		E983F1E919E9C76F00219305 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -701,13 +748,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Lindqvist (P4QD4Z55AC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Markus Lindqvist (P4QD4Z55AC)";
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D DEFAULT_SOURCES";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				OTHER_SWIFT_FLAGS = "-D REAKTOR_SOURCES";
+				PRODUCT_NAME = "$(TARGET_NAME) (Reaktor Edition)";
+				PROVISIONING_PROFILE = "d1b967c2-3cf3-42b7-b1ba-bbb50afa1046";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -718,12 +765,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Reaktor Innovations Oy";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Reaktor Innovations Oy";
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				OTHER_SWIFT_FLAGS = "-D REAKTOR_SOURCES";
+				PRODUCT_NAME = "$(TARGET_NAME) (Reaktor Edition)";
+				PROVISIONING_PROFILE = "2f084b5a-a4ed-4f26-8f5e-b3476ff5f5e6";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 			};
 			name = Release;
@@ -732,6 +780,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Markus Lindqvist (P4QD4Z55AC)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -743,6 +793,7 @@
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1b967c2-3cf3-42b7-b1ba-bbb50afa1046";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vCard Turbo.app/vCard Turbo";
 			};
 			name = Debug;
@@ -751,6 +802,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Reaktor Innovations Oy";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Reaktor Innovations Oy";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -758,6 +812,7 @@
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2f084b5a-a4ed-4f26-8f5e-b3476ff5f5e6";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vCard Turbo.app/vCard Turbo";
 			};
 			name = Release;
