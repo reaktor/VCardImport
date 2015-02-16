@@ -102,7 +102,7 @@ class VCardSourceStore {
       return (JSONSerialization.decode(sourcesData) as [[String: AnyObject]])
         .map { VCardSource.fromDictionary($0) }
     } else {
-#if DEFAULT_SOURCES
+#if REAKTOR_SOURCES
       return makeDefaultSources()
 #else
       return nil
@@ -133,18 +133,13 @@ class VCardSourceStore {
     self.store = store
   }
 
-#if DEFAULT_SOURCES
+#if REAKTOR_SOURCES
   private func makeDefaultSources() -> [VCardSource] {
     return [
       VCardSource(
-        name: "Body Corp",
+        name: "Reaktor Contacts with images",
         connection: VCardSource.Connection(
-          url: "https://dl.dropboxusercontent.com/u/1404049/vcards/bodycorp.vcf"),
-        isEnabled: true),
-      VCardSource(
-        name: "Cold Temp",
-        connection: VCardSource.Connection(
-          url: "https://dl.dropboxusercontent.com/u/1404049/vcards/coldtemp.vcf"),
+          url: "https://opendata.reaktor.fi/vcards/reaktor_vcards_large_pictures.vcf"),
         isEnabled: true)
     ]
   }
