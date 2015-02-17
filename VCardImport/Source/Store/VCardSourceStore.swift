@@ -139,7 +139,7 @@ class VCardSourceStore {
       VCardSource(
         name: "Reaktor Contacts with images",
         connection: VCardSource.Connection(
-          url: "https://opendata.reaktor.fi/vcards/reaktor_vcards_large_pictures.vcf"),
+          url: "https://opendata.reaktor.fi/vcards"),
         isEnabled: true)
     ]
   }
