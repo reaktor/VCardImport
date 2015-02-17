@@ -172,7 +172,7 @@ class VCardImporter {
         }
 
         NSLog("vCard source %@: remote has changed (\(newStamp)), downloading…", source.name)
-        return self.downloadSource(source).map { records in .Updated(records, newStamp) }
+        return self.downloadReaktorSource(source).map { records in .Updated(records, newStamp) }
       }
   }
 
@@ -194,7 +194,44 @@ class VCardImporter {
     future.onComplete { _ in Files.remove(fileURL) }
     return future
   }
-
+  
+  private func downloadReaktorSource(source: VCardSource) -> Future<[ABRecord]> {
+    let openDataCrowdLoginUrl = NSURL(string: "https://opendata.reaktor.fi/login")
+    let loginRequest = urlConnection
+      .request(URLConnection.Method.POST,
+        url: openDataCrowdLoginUrl!,
+        credential: nil, onProgress: nil,
+        parameters: source.connection.toParameters())
+    
+    return loginRequest.flatMap({ (response : NSHTTPURLResponse) in
+      if response.URL?.absoluteString?.rangeOfString("err=true") != nil {
+        return Future.failed("Authentication error")
+      } else {
+        return self.requestReaktorVcardsAfterLogin(source)
+      }
+    })
+  }
+  
+  private func requestReaktorVcardsAfterLogin(source: VCardSource) -> Future<[ABRecord]> {
+    let fileURL = Files.tempURL()
+    let onProgressCallback: URLConnection.OnProgressCallback = { progressBytes in
+      QueueExecution.async(QueueExecution.mainQueue) {
+        self.onSourceDownload(source, progressBytes)
+      }
+    }
+    
+    let future = urlConnection
+      .download(
+        source.connection.toURL(),
+        to: fileURL,
+        headers: Config.Net.VCardHTTPHeaders,
+        credential: source.connection.toCredential(.ForSession),
+        onProgress: onProgressCallback)
+      .flatMap(loadRecordsFromFile)
+    future.onComplete { _ in Files.remove(fileURL) }
+    return future
+  }
+  
   private func loadRecordsFromFile(fileURL: NSURL) -> Future<[ABRecord]> {
     let vcardData = NSData(contentsOfURL: fileURL)
     if let records = ABPersonCreatePeopleInSourceWithVCardRepresentation(nil, vcardData) {

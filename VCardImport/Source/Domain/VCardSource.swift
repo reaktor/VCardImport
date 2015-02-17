@@ -109,6 +109,13 @@ struct VCardSource {
         return nil
       }
     }
+    
+    func toParameters() -> [String : AnyObject] {
+      return [
+        "username" : username,
+        "password" : password
+      ]
+    }
   }
 
   struct ImportResult {

@@ -13,6 +13,7 @@ class URLConnection {
   private let SuccessStatusCodes = 200..<300
 
   private let manager: Alamofire.Manager
+  private let encoding: ParameterEncoding = .URL
 
   init() {
     func makeConfig() -> NSURLSessionConfiguration {
@@ -31,13 +32,15 @@ class URLConnection {
     url: NSURL,
     headers: Headers = [:],
     credential: NSURLCredential? = nil,
-    onProgress: OnProgressCallback? = nil)
+    onProgress: OnProgressCallback? = nil,
+    parameters: [String: AnyObject] = [:])
     -> Future<NSHTTPURLResponse>
   {
     var request = Alamofire.request(makeURLRequest(
       url: url,
       method: method,
-      headers: headers))
+      headers: headers,
+      parameters: parameters))
 
     if let cred = credential {
        request = request.authenticate(usingCredential: cred)
@@ -125,18 +128,22 @@ class URLConnection {
   private func makeURLRequest(
     #url: NSURL,
     method: Method = .GET,
-    headers: Headers = [:])
+    headers: Headers = [:],
+    parameters: [String: AnyObject] = [:])
     -> NSURLRequest
   {
     let request = NSMutableURLRequest(URL: url)
     request.HTTPMethod = method.rawValue
+    request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
     for (headerName, headerValue) in DefaultHeaders {
       request.setValue(headerValue, forHTTPHeaderField: headerName)
     }
     for (headerName, headerValue) in headers {
       request.setValue(headerValue, forHTTPHeaderField: headerName)
     }
-    return request
+    
+    let (req, err) = encoding.encode(request, parameters: parameters)
+    return req
   }
 
   private func isSuccessStatusCode(code: Int) -> Bool {
@@ -146,5 +153,6 @@ class URLConnection {
   enum Method: String {
     case HEAD = "HEAD"
     case GET = "GET"
+    case POST = "POST"
   }
 }
